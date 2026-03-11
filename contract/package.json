@@ -1,0 +1,18 @@
+{
+    "name": "quest-tracker-contract",
+    "version": "1.0.0",
+    "description": "OPNet smart contract for tracking quest completions on-chain",
+    "scripts": {
+        "build": "asc src/index.ts --config asconfig.json --target debug",
+        "build:staking": "asc src/index-staking.ts --config asconfig.json --target staking",
+        "build:vault": "asc src/index-vault.ts --config asconfig.json --target vault",
+        "clean": "rm -rf build/*"
+    },
+    "dependencies": {
+        "@btc-vision/btc-runtime": "rc",
+        "@btc-vision/as-bignum": "latest",
+        "@btc-vision/assemblyscript": "latest",
+        "@btc-vision/opnet-transform": "latest",
+        "@assemblyscript/loader": "latest"
+    }
+}
